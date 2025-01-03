@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-mode">
+    <header>
+        <h1>Keep Notes</h1>
+        <div class="header-buttons">
+            <button id="createNoteButton">Create Note</button>
+            <button id="themeButton">Theme</button>
+        </div>
+    </header>
+
+    <!-- Theme Pop-up -->
+    <section id="themePopup" class="hidden">
+        <div class="popup-content">
+            <button id="closeThemePopup" class="close-btn">&times;</button>
+            <h2>Select Theme</h2>
+            <button id="lightThemeButton">Light Mode</button>
+            <button id="darkThemeButton">Dark Mode</button>
+        </div>
+    </section>
+
+    <!-- Note Form Popup -->
+    <section id="noteFormSection" class="hidden">
+        <div class="popup">
+            <form id="noteForm">
+                <input type="text" id="noteTitle" placeholder="Note Title" required>
+                <textarea id="noteContent" placeholder="Note Content" required></textarea>
+                <input type="file" id="noteImage" accept="image/*">
+                <div class="form-buttons">
+                    <button type="submit">Save Note</button>
+                    <button type="button" id="cancelButton">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <main id="notesList"></main>
+
+    <script src="script.js"></script>
+</body>
+</html>
